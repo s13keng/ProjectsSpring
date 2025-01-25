@@ -91,42 +91,80 @@
         </li>
     </ol>
     <hr>
+<!--How someone can contact me with their information-->
         <h2>Connect With Me</h2>
     <hr>
     <form>
         <div>
-        Name: 
-            <input name="name" type="name" placeholder="Enter your Name" required>
+<!--The persons name whom is filling these questions out-->
+       <label>
+            Name:
+       </label>
+            <input name="name" 
+            type="name" 
+            placeholder="Enter your Name" 
+            required>
         </div>
         <br>
-        <div>
-        Email:
-            <input name="email" type="email" placeholder="Enter your email" required>
-        </div>
+<!--Their email-->
+    <div>
+        <label>
+            Email:
+        </label>
+        
+            <input name="email" 
+            type="email" 
+            placeholder="Enter your email" 
+            required>
+    </div>
         <br>
-        <div>
-        Company:
-            <input name="company" type="text" placeholder="Who you work for?" required>
-        </div>
+<!--The company they work for or reaching out from-->
+    <div>
+        <label>
+            Company:
+        </label>
+        
+            <input name="company" 
+            type="text" 
+            placeholder="Who you work for?" 
+            required>
+    </div>
         <br>
-        <div>
-        Phone Number:
-            <input name="number" type="num" placeholder="Enter your number" minlength="10" required>
-        </div>
+<!--The persons phone number-->
+    <div>
+        <label>
+            Phone Number:
+        </label>
+            <input name="number" 
+            type="num" 
+            placeholder="Enter your number" 
+            minlength="10" 
+            required>
+    </div>
         <br>
-        <div>
+<!--multiple choice option using radio so they can select why they are reaching out for-->
+    <div>
+        <label>
             <p>Reason for Contact?</p>
+        </label>
             <input type="radio" name="reasons" value="Job Offer">Job Offer<br>
             <input type="radio" name="reasons" value="Collabaration">Collabaration<br>
             <input type="radio" name="reasons" value="Feedback">Feedback<br>
             <input type="radio" name="reasons" value="Other">Other<br>
-        </div>
-        <div>
-            <label for="message">Message:</label>
+    </div>
+<!--Space for them to leave a message-->
+    <div>
+        <label 
+        for="message">Message:
+        </label>
             <textarea 
-                id="message" name="message" placeholder="Please leave a message and I will get back to you" required>
+                id="message" 
+                name="message" 
+                placeholder="Please leave a message and I will get back to you" 
+                required>
             </textarea>
-        </div>
+    </div>
+            <button type="reset">Reset</button>
             <button type="submit"> Submit Form</button>
     </form>
 
