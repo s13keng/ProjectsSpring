@@ -1,0 +1,14 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(#636363, #a2ab58)
+}
+
+div{
+    text-align: left;
+}
+a{
+    text-decoration: none;
+}
