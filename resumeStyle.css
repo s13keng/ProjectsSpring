@@ -1,17 +1,43 @@
+/* The fonts for the whole file */
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* The background color for the html */
 body{
     background:linear-gradient(#636363, #a2ab58)
 }
+/* Styling to all headings in each section of resume w/ sizing and shadow to name */
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-shadow: 2px 2px #dcf1e9;
+    text-align: center;
+}
+h2{
+    color: #83f28f;
+    font-size: 1.5em;
+}
+h3{
+    color: #9cd8a2;
+    font-size: 1em;
+}
 
+th{
+    color: #9cd8a2;
+    font-size: 1.2em;
+}
+/* Style for text sections */
 div{
     text-align: left;
+    font-size: 1.2em;
 }
+
+p{
+    text-indent: 10px;
+    tex
+}
+/* Style for links as well as getting rid of underline */
 a{
     text-decoration: none;
-}
-a{
-    color: green;
+    color: #013220;
 }
