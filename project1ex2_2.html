@@ -11,23 +11,19 @@
     <header>
         <img src="imgs/profile.jpeg" alt="Picture of Keng"  id="profilePic">
         <h1>Keng Long Mo</h1>
-    </header>
-    <hr>
-<!--Contact info-->
-        <h2>Contact</h2>
-    <hr>
-            <p>Email: <a href="kengmo@gmail.com">kengmo@gmail.com</a></p>
+
+        <p>Email: <a href="kengmo@gmail.com">kengmo@gmail.com</a></p>
             <p>Phone: <a href="215-610-1048">215-610-1048</a></p>
             <p>Address: 9800 Campus Point Drive, San Diego, CA 92121</p>
+    </header>
+
 <!--Summary about me-->
     <h2>Description</h2>
-    <hr>
     <p>Hello there! I'm currently a junior at Temple University majoring Computer Science. I am passionate about technology and its ability to create projects from scratch. I am well versed with core knowledge in C++, C and Python. My goal is to use my technical skills and knowledge to help companies leverage technology to achieve their business objectives. I'm eager to join a team where I can grow my skills, collaborate with others, and contribute to the success of the organization. If you're looking for a driven and passionate software developer in the making with a strong work ethic and a desire to learn!</p>
 <!--Skillset-->
         <h2>Skills</h2>
-    <hr id="skills"> 
 <!--Table to display both hard and soft skills w/ hard being the top code & soft is bottom -->
-        <table>
+        <table id="skills">
             <thead>
                 <tr>
                     <!--top of the table in bold showing what its about-->
@@ -53,7 +49,6 @@
         </table>
 <!--Info on my education-->
         <h2>Education</h2>
-    <hr>
 <!--Had to use strong so it could prioritize the link and not make the rest of the text part of that hyperlink-->
         <ul>
             <li><strong><a href="https://www.readingsd.org/rhs">Reading High School</a></strong>: 2012-2016</li>
@@ -62,7 +57,6 @@
         </ul>
 
         <h2>Work Experience</h2>
-    <hr>
 <!--A list inside another to should in order of job I had, and what I did in eac-->
 <!--Had to make it a list while inside one of the order so i could use another order type inside-->
     <ol>
@@ -91,10 +85,8 @@
             </ul>
         </li>
     </ol>
-    <hr>
 <!--How someone can contact me with their information-->
         <h2>Connect With Me</h2>
-    <hr>
     <form>
         <div>
 <!--The persons name whom is filling these questions out-->
@@ -137,15 +129,14 @@
             Phone Number:
         </label>
             <input name="number" 
-            type="number" 
+            type="text" 
             placeholder="Enter your number" 
             required>
     </div>
-        <br>
 <!--multiple choice option using radio so they can select why they are reaching out for-->
     <div>
             <p>Reason for Contact?</p>
-            <input type="radio" name="reasons" value="Job Offer">Job Offer<br>
+            <input type="radio" name="reasons" value="Job Offer">Job Offer <br>
             <input type="radio" name="reasons" value="Collabaration">Collabaration<br>
             <input type="radio" name="reasons" value="Feedback">Feedback<br>
             <input type="radio" name="reasons" value="Other">Other<br>
@@ -165,7 +156,7 @@
             <button type="reset">Reset</button>
             <button type="submit"> Submit Form</button>
     </form>
-
+<br>
 <!--So it would be easier for readers to distinguish how to network with me-->
     <footer>
         <div>
@@ -177,7 +168,7 @@
                         </a>
                     </li>
                     <li><a href="https://github.com/s13keng" target="_blank">
-                        <img src="imgs/GitHub-logo.png" alt="GitHub logo" id="gitHubLogo" witdh="38">
+                        <img src="imgs/GitHub-logo.png" alt="GitHub logo" id="gitHubLogo" width="50">
                         </a>
                     </li>
                 </ul>
