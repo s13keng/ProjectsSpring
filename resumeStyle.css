@@ -1,10 +1,28 @@
-/* The fonts for the whole file */
+/* The fonts for the whole file, the background color */
 html{
     font-family: Arial, Helvetica, sans-serif;
-}
-/* The background color for the html */
-body{
     background:linear-gradient(#636363, #a2ab58)
+} 
+/* border box to all element */
+*{
+    box-sizing: border-box;
+  }
+  /* header padding */
+  header{
+    padding: 0.5rem;
+  }
+/* space out the text from the wall */
+body{
+    margin: 1rem;
+    padding: 1rem;
+    border: 10px solid black;
+}
+/* set the size, shape and border of picture */
+#profilePic{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    border: 5px double green;
 }
 /* Styling to all headings in each section of resume w/ sizing and shadow to name */
 h1{
@@ -16,13 +34,14 @@ h1{
 h2{
     color: #83f28f;
     font-size: 1.5em;
+    padding: 5px;
 }
 h3{
     color: #9cd8a2;
     font-size: 1em;
 }
-
-#skills > th{
+/* color for the names of the two things in the table */
+th{
     color: #9cd8a2;
     font-size: 1.2em;
 }
@@ -40,8 +59,19 @@ a{
     text-decoration: none;
     color: #013220;
 }
-
-#profilePic{
-    width: 13rem;
-    height: 13rem;
+/* give spacing and border line */
+h1, h2, h3{
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid black;
+}
+/*give color to the text with spacing and  border that looks like a portrait frame*/
+form input, form textarea, form select{
+  padding: 0.3rem;
+  color: green;
+  border: wavy rgb(4, 0, 0);
+  background-color: #ffffff;
+}
+/* gave border on top of the footer to divide the content from it as well enclose it in a box*/
+footer {
+    border: 3px double black;
 }
