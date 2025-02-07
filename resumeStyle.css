@@ -21,9 +21,9 @@ html{
     align-self: center;
   }
   header section .contactinfo {
-    /*padding-left: 993px;
-    font-size: small; */
-    align-self: flex-end;
+    padding-left: 993px;
+    font-size: small; 
+    /*align-self: flex-end;*/
   }
 /* space out the text from the wall */
 body{
@@ -90,11 +90,11 @@ h1, h2, h3{
   padding-bottom: 0.5rem;
 
 }
-/*give color to the text with spacing and  border that looks like a portrait frame*/
+/*give color to the text with spacing and  border double lines*/
 form input, form textarea, form select{
   padding: 0.3rem;
   color: green;
-  border: wavy rgb(4, 0, 0);
+  border: double rgb(4, 0, 0);
   background-color: #ffffff;
 }
 /* gave border on top of the footer to divide the content from it as well enclose it in a box*/
