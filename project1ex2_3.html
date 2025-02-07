@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Resume</title>
+</head>
+    <link rel="stylesheet" type="text/css" href="resumeStyle.css">
+<body>
+    <header>
+        <img src="imgs/profile.jpeg" alt="Picture of Keng"  id="profilePic">
+        <h1>Keng Long Mo</h1>
+
+        <p>Email: <a href="kengmo@gmail.com">kengmo@gmail.com</a></p>
+            <p>Phone: <a href="215-610-1048">215-610-1048</a></p>
+            <p>Address: 9800 Campus Point Drive, San Diego, CA 92121</p>
+    </header>
+
+<!--Summary about me-->
+    <h2>Description</h2>
+    <p>Hello there! I'm currently a junior at Temple University majoring Computer Science. I am passionate about technology and its ability to create projects from scratch. I am well versed with core knowledge in C++, C and Python. My goal is to use my technical skills and knowledge to help companies leverage technology to achieve their business objectives. I'm eager to join a team where I can grow my skills, collaborate with others, and contribute to the success of the organization. If you're looking for a driven and passionate software developer in the making with a strong work ethic and a desire to learn!</p>
+<!--Skillset-->
+        <h2>Skills</h2>
+<!--Table to display both hard and soft skills w/ hard being the top code & soft is bottom -->
+        <table id="skills">
+            <thead>
+                <tr>
+                    <!--top of the table in bold showing what its about-->
+                    <th>Hard Skills</th>
+                    <th>Soft Skills</th>
+                </tr>
+            </thead>
+                    <!--Everything in the tbody are the rows with data that belong to one of the headers-->
+            <tbody>
+                <tr>
+                    <td>Problem Solving</td>
+                    <td>Communicative</td>
+                </tr>
+                <tr>
+                    <td>Testing and Debugging</td>
+                    <td>Adaptable</td>
+                </tr>
+                <tr>
+                    <td>C, C++ and Java Foundation</td>
+                    <td>Critical Thinking abilities</td>
+                </tr>
+            </tbody>
+        </table>
+<!--Info on my education-->
+        <h2>Education</h2>
+<!--Had to use strong so it could prioritize the link and not make the rest of the text part of that hyperlink-->
+        <ul>
+            <li><strong><a href="https://www.readingsd.org/rhs">Reading High School</a></strong>: 2012-2016</li>
+            <li><strong><a href="https://www.racc.edu/">Reading Area Community College</a></strong>: 2017-2020</li>
+            <li><strong><a href="https://www.temple.edu/">Temple University</a></strong>: 2022-Current</li>
+        </ul>
+
+        <h2>Work Experience</h2>
+<!--A list inside another to should in order of job I had, and what I did in eac-->
+<!--Had to make it a list while inside one of the order so i could use another order type inside-->
+    <ol>
+        <li>
+                <div><h3>Hollister</h3>2011-2015</div>
+            <ul>
+                <li>Customer Experience</li>
+                <li>Store Presentation and Sales Floor</li>
+                <li>Communication</li>
+            </ul>
+        </li>
+        <li>
+                <div><h3>Cricket Wireless</h3>2017-2022</div>
+            <ul>
+                <li>Troubleshooting</li>
+                <li>Salesmen</li>
+                <li>Inventory Management</li>
+            </ul>
+        </li>
+        <li>    
+                <div><h3>Amazon</h3>2022-Current</div>
+            <ul>
+                <li>Problem solver</li>
+                <li>Picker</li>
+                <li>Ship Dock</li>
+            </ul>
+        </li>
+    </ol>
+<!--How someone can contact me with their information-->
+        <h2>Connect With Me</h2>
+    <form>
+        <div>
+<!--The persons name whom is filling these questions out-->
+       <label>
+            Name:
+       </label>
+            <input name="name" 
+            type="text" 
+            placeholder="Enter your Name" 
+            required>
+        </div>
+        <br>
+<!--Their email-->
+    <div>
+        <label>
+            Email:
+        </label>
+        
+            <input name="email" 
+            type="email" 
+            placeholder="Enter your email" 
+            required>
+    </div>
+        <br>
+<!--The company they work for or reaching out from-->
+    <div>
+        <label>
+            Company:
+        </label>
+        
+            <input name="company" 
+            type="text" 
+            placeholder="Who you work for?" 
+            required>
+    </div>
+        <br>
+<!--The persons phone number-->
+    <div>
+        <label>
+            Phone Number:
+        </label>
+            <input name="number" 
+            type="text" 
+            placeholder="Enter your number" 
+            required>
+    </div>
+<!--multiple choice option using radio so they can select why they are reaching out for-->
+    <div>
+            <p>Reason for Contact?</p>
+            <input type="radio" name="reasons" value="Job Offer">Job Offer <br>
+            <input type="radio" name="reasons" value="Collabaration">Collabaration<br>
+            <input type="radio" name="reasons" value="Feedback">Feedback<br>
+            <input type="radio" name="reasons" value="Other">Other<br>
+    </div>
+<!--Space for them to leave a message-->
+    <div>
+        <label 
+        for="message">Message:
+        </label>
+            <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Please leave a message and I will get back to you" 
+                required>
+            </textarea>
+    </div>
+            <button type="reset">Reset</button>
+            <button type="submit"> Submit Form</button>
+    </form>
+<br>
+<!--So it would be easier for readers to distinguish how to network with me-->
+    <footer>
+        <div>
+            <p>It would be a pleasure to connect and network with new people:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/keng-long-mo-90244b14b/" target="_blank">
+                            <img src="imgs/LinkedIn_picture.svg" alt="LinkedIn logo" width="50">
+                        </a>
+                    </li>
+                    <li><a href="https://github.com/s13keng" target="_blank">
+                        <img src="imgs/GitHub-logo.png" alt="GitHub logo" id="gitHubLogo" width="50">
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </footer>
+</body>
+</html>
+
