@@ -82,22 +82,26 @@ body
 {
 position: absolute;
 top: 20px;
+right: -0px;
 }
 
 /* Exercise 4 */
 
 .exercise-4
 {
-  position: fixed;
   top: 360px;
 }
 
 .exercise-4 .blue
 {
-
+  position: absolute;
+top: -0px;
+right: -1355px;
 }
 
 .exercise-4 .yellow
 {
-
+  position: relative;
+top: -0px;
+right: -20px;
 }
