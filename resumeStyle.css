@@ -9,7 +9,21 @@ html{
   }
   /* header padding */
   header{
-    padding: 0.5rem;
+    padding: 0.1rem;
+  }
+  /*
+  header section{
+    justify-content: space-between;
+    display: flex;
+  }
+*/
+  header section .nameholder{
+    align-self: center;
+  }
+  header section .contactinfo {
+    /*padding-left: 993px;
+    font-size: small; */
+    align-self: flex-end;
   }
 /* space out the text from the wall */
 body{
@@ -19,10 +33,11 @@ body{
 }
 /* set the size, shape and border of picture */
 #profilePic{
-    width: 13rem;
-    height: 13rem;
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     border: 5px double green;
+    align-self: flex-start;
 }
 /* Styling to all headings in each section of resume w/ sizing and shadow to name */
 h1{
@@ -30,20 +45,31 @@ h1{
     font-size: 3rem;
     text-shadow: 2px 2px #dcf1e9;
     text-align: center;
+
 }
 h2{
     color: #83f28f;
     font-size: 1.5em;
     padding: 5px;
+    border-bottom: 3px solid black;
 }
 h3{
     color: #9cd8a2;
     font-size: 1em;
+    border-bottom: 3px solid black;
 }
 /* color for the names of the two things in the table */
 th{
     color: #9cd8a2;
     font-size: 1.2em;
+}
+.myskills .dataset{
+    display: flex;
+    justify-content: flex-start;
+}
+.workexp .dataset{
+    display: flex;
+    justify-content: flex-start;
 }
 /* Style for text sections */
 div{
@@ -62,7 +88,7 @@ a{
 /* give spacing and border line */
 h1, h2, h3{
   padding-bottom: 0.5rem;
-  border-bottom: 3px solid black;
+
 }
 /*give color to the text with spacing and  border that looks like a portrait frame*/
 form input, form textarea, form select{
