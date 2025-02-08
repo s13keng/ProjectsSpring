@@ -1,95 +1,118 @@
+/* border box to all element */
+*{
+    box-sizing: border-box;
+  }
+
 /* The fonts for the whole file, the background color */
 html{
     font-family: Arial, Helvetica, sans-serif;
     background:linear-gradient(#636363, #a2ab58)
 } 
-/* border box to all element */
-*{
-    box-sizing: border-box;
-  }
+
   /* header padding */
-  header{
-    padding: 0.1rem;
-  }
-  /*
-  header section{
+header{
+     padding: .1rem;
+     display: flex;
+     justify-content: space-between;
+   } 
+
+   /* have content spaced out and adjust height and margin*/
+header section{
     justify-content: space-between;
     display: flex;
-  }
-*/
-  header section .nameholder{
+    height: 20rem;
+    margin: auto;
+  } 
+
+  /* email and addres*/
+header section .nameholder{
+    display: inline-flex;
     align-self: center;
+    text-align: center;
+    padding-left: 200px;
   }
-  header section .contactinfo {
-    padding-left: 993px;
-    font-size: small; 
-    /*align-self: flex-end;*/
+
+  /* profile pic h/w and radius to make round as well border*/
+#profilePic{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: flex-start;
+    border: 5px double green;
+    gap: 20px;
+    margin-left: 0;
   }
-/* space out the text from the wall */
+
+  /*flex and alignment for contact info */
+header section .contactinfo {
+    padding-left: 200px;/*993
+    font-size: small; */
+    display: inline-flex;
+    align-items: flex-end;
+    font-size: small;
+    text-align: right;
+    /*padding: 2px;*/
+  }
+
+/* space out the text from the wall */  
 body{
     margin: 1rem;
     padding: 1rem;
     border: 10px solid black;
 }
-/* set the size, shape and border of picture */
-#profilePic{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    border: 5px double green;
-    align-self: flex-start;
-}
+
 /* Styling to all headings in each section of resume w/ sizing and shadow to name */
 h1{
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
     text-shadow: 2px 2px #dcf1e9;
-    text-align: center;
+    
 
 }
+
 h2{
     color: #83f28f;
     font-size: 1.5em;
     padding: 5px;
     border-bottom: 3px solid black;
 }
+
 h3{
     color: #9cd8a2;
     font-size: 1em;
     border-bottom: 3px solid black;
 }
+
 /* color for the names of the two things in the table */
 th{
     color: #9cd8a2;
     font-size: 1.2em;
 }
-.myskills .dataset{
-    display: flex;
-    justify-content: flex-start;
-}
+
+/* to have it to the left*/
 .workexp .dataset{
     display: flex;
     justify-content: flex-start;
 }
-/* Style for text sections */
-div{
-    text-align: left;
-    font-size: 1.2em;
-}
 
+/* to indent the text*/
 p{
     text-indent: 10px;
 }
+
 /* Style for links as well as getting rid of underline */
 a{
     text-decoration: none;
     color: #013220;
 }
+
 /* give spacing and border line */
 h1, h2, h3{
   padding-bottom: 0.5rem;
 
 }
+
 /*give color to the text with spacing and  border double lines*/
 form input, form textarea, form select{
   padding: 0.3rem;
@@ -97,6 +120,7 @@ form input, form textarea, form select{
   border: double rgb(4, 0, 0);
   background-color: #ffffff;
 }
+
 /* gave border on top of the footer to divide the content from it as well enclose it in a box*/
 footer {
     border: 3px double black;
