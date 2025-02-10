@@ -123,6 +123,14 @@ background-color: #ffffff;
 footer {
   border: 3px double black;
 }
+ /*Whenever hovering the button, it will change color*/
+ button:hover{
+  border: 2px solid blue;
+ }
+ /*Whenever hovering links, it will change size to show user its interactive*/
+ a:hover{
+  font-size: 1.5em;
+ }
 /*mobile friendly*/
 @media only screen and(min-width:480px){
   header .myinfo{
