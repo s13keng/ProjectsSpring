@@ -11,10 +11,13 @@ html{
 
 /* header padding */
 header{
-   padding: .1rem;
-   display: flex;
-   justify-content: space-between;
- } 
+  padding: .1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+ flex-flow: column;
+ position: relative;
+} 
 
  /* have content spaced out and adjust height and margin*/
 header section{
@@ -133,10 +136,12 @@ footer {
  }
 /*mobile friendly*/
 @media only screen and(min-width:480px){
-  header .myinfo{
-   width: 90%;
-   flex-direction: row;
-    flex-flow: column;
-  
+  header {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      flex-direction: row;
+       flex-flow: column;
+     
   } 
 }
