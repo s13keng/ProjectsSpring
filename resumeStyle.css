@@ -11,29 +11,43 @@ html{
 
 /* header padding */
 header{
-  padding: .1rem;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
- flex-flow: column;
- position: relative;
-} 
+   padding: .1rem;
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+  flex-flow: column;
+ 
+ } 
 
  /* have content spaced out and adjust height and margin*/
-header section{
+/*header section{
   justify-content: space-between;
   display: flex;
   height: 20rem;
   margin: auto;
 
+} */
+.myinfo{
+  justify-content: flex-end;
+  display: flex;
+  height: 20rem;
+  margin: auto;
+  flex-direction: row;
 } 
 
 /* email and addres*/
-header section .nameholder{
+/*header section .nameholder{
   display: inline-flex;
   align-self: center;
   text-align: center;
   padding-left: 200px;
+}*/
+.nameholder{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  /*padding-left: 100px;*/
 }
 
 /* profile pic h/w and radius to make round as well border*/
@@ -49,12 +63,19 @@ header section .nameholder{
 }
 
 /*flex and alignment for contact info */
-header section .contactinfo {
+/*header section .contactinfo {
   padding-left: 200px;
   display: inline-flex;
   align-items: flex-end;
   font-size: small;
   text-align: right;
+}*/
+.contactinfo {
+  font-size: small; 
+  align-items: flex-end;
+  font-size: small;
+  text-align: right;
+  /*padding: 2px;*/
 }
 /* space out the text from the wall */  
 body{
@@ -106,6 +127,7 @@ p{
 a{
   text-decoration: none;
   color: #013220;
+  transition: font-size 2s;
 }
 
 /* give spacing and border line */
@@ -126,9 +148,9 @@ background-color: #ffffff;
 footer {
   border: 3px double black;
 }
- /*Whenever hovering the button, it will change color*/
+/*Whenever hovering the button, it will change color*/
  button:hover{
-  border: 2px solid darkgreen;
+  border: 3px solid darkgreen;
  }
  /*Whenever hovering links, it will change size to show user its interactive*/
  a:hover{
@@ -136,12 +158,12 @@ footer {
  }
 /*mobile friendly*/
 @media only screen and(min-width:480px){
-  header {
-      display: flex;
-      position: relative;
-      justify-content: center;
-      flex-direction: row;
-       flex-flow: column;
-     
+  header .myinfo{
+   display: flex;
+   position: relative;
+   justify-content: center;
+   flex-direction: row;
+    flex-flow: column;
+  
   } 
 }
