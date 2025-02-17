@@ -12,7 +12,7 @@ const friend = "BRUTUS"
 const letterShift = 3; 
 Number.isInteger(letterShift);
 
-//step1
+//step1 ex2
 //The roman alphabet and to keep them lower case
 const romanAlpha = '"ABCDEFGHIJKLMNOPQRSTUVWXZ"';
 const lowerRoman =romanAlpha.toLowerCase();
@@ -46,5 +46,24 @@ const encryptedFirstLetter = lowerRoman[extLetters];
 const encryptedMessage = "EUXWXV";
 let teaserCode = encryptedMessage.slice(0,3);
 
+//step1 ex3
+// will get a random decimal
+const randomDecimal = Math.random();
 
-console.log(teaserCode);
+//step2
+//range from 3-33 
+//added one so it could cover either the 3 or number 33
+const range = 33 - 3 + 1;
+
+//Q1- The reason 1 was added to the difference between 33 and 3 is so it can include either 3 or 33 since if it was just 30 number the chances for it to be 3 or 33 wouldnt be possible.
+
+//step3
+//New var called ranNumRange to include both the decimal with the range 
+const randomNumRange = randomDecimal * range;
+
+//Q2-multiplying randomDecimal by range help us get a random number that will be within that range and its random each time. Also because random decimal will be less than 1 and being multiplied by the range it would get other numbers that random decimal is limited to.
+
+//step4 round down the decimal number obtained in Step 3 to get a whole integer by using math.floor and the value being targeted inside
+const randomInt = Math.floor(randomDecimal);
+
+console.log(shiftValue);
