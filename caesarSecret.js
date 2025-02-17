@@ -66,4 +66,12 @@ const randomNumRange = randomDecimal * range;
 //step4 round down the decimal number obtained in Step 3 to get a whole integer by using math.floor and the value being targeted inside
 const randomInt = Math.floor(randomDecimal);
 
+//Q3-Its better to use floor over round because with rounding it would move up and there is a chance it would go over 33 which we dont want.
+
+//step5
+//New var to hold the value of the 3-33 picked 
+const shiftValue = randomInt + 3;
+
+//Q4- Reason to add 3 was so it could actually get a a total of 33 since just 33-3 is 30 it would need 3 to the range can be 33.
+
 console.log(shiftValue);
