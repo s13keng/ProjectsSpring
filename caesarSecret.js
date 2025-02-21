@@ -46,6 +46,8 @@ const encryptedFirstLetter = lowerRoman[extLetters];
 const encryptedMessage = "EUXWXV";
 let teaserCode = encryptedMessage.slice(0,3);
 
+console.log(teaserCode);
+
 //step1 ex3
 // will get a random decimal
 const randomDecimal = Math.random();
