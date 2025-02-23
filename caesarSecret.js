@@ -77,3 +77,47 @@ const shiftValue = randomInt + 3;
 //Q4- Reason to add 3 was so it could actually get a a total of 33 since just 33-3 is 30 it would need 3 to the range can be 33.
 
 console.log(shiftValue);
+
+//Given variables
+const emblemClue1 = "Eagle";
+const emblemClue2 = "Laurel";
+const emblemClue3 = 7;
+
+//step1 ex4
+let locationStart = "";
+if (emblemClue1 === 'Eagle'){
+    locationStart = 'Forum';
+}
+else if (emblemClue1 === 'Lion'){
+    locationStart = 'Colosseum';
+}
+else{
+    locationStart = 'Villa';
+}
+console.log(locationStart);
+
+//step2
+if (emblemClue2 === 'Laurel' && firstLocation === 'Forum'){
+    locationStart += " of Augustus";
+}
+if (emblemClue2 === 'Grapes' || firstLocation === 'Villa'){
+    locationStart += " of Pompey";
+}
+
+//step3
+switch(emblemClue3){
+    case 3:
+        locationStart += 'South';
+        break;
+    case 4:
+        locationStart += 'West';
+        break;
+    case 7:
+        locationStart += 'North';
+        break;
+    case 9:
+        locationStart += 'East';
+        break;
+}
+
+//Q-
