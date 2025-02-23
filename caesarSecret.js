@@ -84,6 +84,7 @@ const emblemClue2 = "Laurel";
 const emblemClue3 = 7;
 
 //step1 ex4
+//show if one conditional is true it would give the answer if not move on to the next option
 let locationStart = "";
 if (emblemClue1 === 'Eagle'){
     locationStart = 'Forum';
@@ -97,6 +98,7 @@ else{
 console.log(locationStart);
 
 //step2
+// first it the and while the second is or with location being update to whatever condition true
 if (emblemClue2 === 'Laurel' && firstLocation === 'Forum'){
     locationStart += " of Augustus";
 }
@@ -105,6 +107,7 @@ if (emblemClue2 === 'Grapes' || firstLocation === 'Villa'){
 }
 
 //step3
+// instead of using a console log to show which location i continued to use the locationstart to be update with this
 switch(emblemClue3){
     case 3:
         locationStart += 'South';
