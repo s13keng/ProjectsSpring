@@ -120,4 +120,4 @@ switch(emblemClue3){
         break;
 }
 
-//Q-
+//Q- Its important to be careful of which equal to use because double equal only checks value which triple equal checks for value and type so it is more strict compared to the double.
