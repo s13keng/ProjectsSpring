@@ -99,10 +99,10 @@ console.log(locationStart);
 
 //step2
 // first it the and while the second is or with location being update to whatever condition true
-if (emblemClue2 === 'Laurel' && firstLocation === 'Forum'){
+if (emblemClue2 === 'Laurel' && locationStart === 'Forum'){
     locationStart += " of Augustus";
 }
-if (emblemClue2 === 'Grapes' || firstLocation === 'Villa'){
+if (emblemClue2 === 'Grapes' || locationStart === 'Villa'){
     locationStart += " of Pompey";
 }
 
@@ -124,3 +124,10 @@ switch(emblemClue3){
 }
 
 //Q- Its important to be careful of which equal to use because double equal only checks value which triple equal checks for value and type so it is more strict compared to the double.
+
+const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"];
+
+//step1 ex5
+//to add his friend brutus
+guests.unshift("BRUTUS");
+console.log(guests[0])
