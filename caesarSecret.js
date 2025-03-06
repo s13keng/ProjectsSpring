@@ -130,4 +130,7 @@ const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"];
 //step1 ex5
 //to add his friend brutus
 guests.unshift("BRUTUS");
-console.log(guests[0])
+
+//Q1- to find out if the array was added we can use console.log(guests[0] and brutus to be added to the first spot.
+
+//step2
