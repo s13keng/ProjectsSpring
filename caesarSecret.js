@@ -156,5 +156,7 @@ const specialInvite = guests.slice(0,3);
 const honoredGuests = guests.slice(0, 1); 
 // Will get everyone else on the list of  guests
 const otherGuests = guests.slice(1); 
+//will put the names in order
 otherGuests.sort(); 
+//will combine both the vars
 const sortedGuests = honoredGuests.concat(otherGuests);
