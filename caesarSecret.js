@@ -130,7 +130,19 @@ const guests = ["ANTONY", "CICERO", "CASSIUS", "CLEOPATRA"];
 //step1 ex5
 //to add his friend brutus
 guests.unshift("BRUTUS");
-
-//Q1- to find out if the array was added we can use console.log(guests[0] and brutus to be added to the first spot.
+//Q1- to find out if the array was added we can use guests[0] in the console and brutus to be added to the first spot.
 
 //step2
+guests.push("AUGUSTUS","LUCIA")
+
+//step3
+const spartacusIndex = guests.indexOf("SPARTACUS");
+
+//Q2- If he wasnt invited the outcome will be -1 because he wasnt invited.
+
+//step4
+const indexToRemove = guests.indexOf("CASSIUS");
+guests.splice(indexToRemove, 1);
+
+//step5
+const specialInvite = guests.slice(0,3);
