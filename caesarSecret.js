@@ -133,16 +133,28 @@ guests.unshift("BRUTUS");
 //Q1- to find out if the array was added we can use guests[0] in the console and brutus to be added to the first spot.
 
 //step2
+//Add these two to the end of the list 
 guests.push("AUGUSTUS","LUCIA")
 
 //step3
+//to see if they are in the list
 const spartacusIndex = guests.indexOf("SPARTACUS");
 
 //Q2- If he wasnt invited the outcome will be -1 because he wasnt invited.
 
 //step4
+//to remove cassius and what index he is in
 const indexToRemove = guests.indexOf("CASSIUS");
 guests.splice(indexToRemove, 1);
 
 //step5
+//to get out the first 3 guests 
 const specialInvite = guests.slice(0,3);
+
+//step6
+//Will only select the first guest
+const honoredGuests = guests.slice(0, 1); 
+// Will get everyone else on the list of  guests
+const otherGuests = guests.slice(1); 
+otherGuests.sort(); 
+const sortedGuests = honoredGuests.concat(otherGuests);
