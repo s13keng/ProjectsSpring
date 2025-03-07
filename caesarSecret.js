@@ -190,7 +190,16 @@ guestsVIP.BRUTUS = {
 guestsVIP.CICERO.pastGifts.push("Golden Lyre");
 
 //step3
+//new var for just the region for anthony
 const antonyRegion = guestsVIP.ANTONY.region;
 
 //step4
+//will get rid of everything for cicero
 delete guestsVIP.CICERO;
+
+//step5
+//given new var to then change the location for anthony 
+const generalProfile = guests.ANTONY;
+generalProfile.region = "Egypt";
+
+//Q1- The new region will be changed in the original guests list because since its a reference that information that was changed with the new var will change the original and both have the same reference.
