@@ -161,7 +161,8 @@ otherGuests.sort();
 //will combine both the vars
 const sortedGuests = honoredGuests.concat(otherGuests);
 
-const guests = {
+//Had to add VIP since there is a const as guest already
+const guestsVIP = {
     ANTONY: {
       title: "General",
       region: "Rome",
@@ -175,4 +176,21 @@ const guests = {
       pastGifts: ["Scroll of Proverbs", "Quill"]
     }
   };
-  
+
+//step1
+//adding a new object to the array
+guestsVIP.BRUTUS = {
+    title: "Senator",
+    region: "Rome",
+    dietaryPreference: "Vegan",
+    pastGifts: ["Silver Dagger", "Marble Bust"]
+  };
+
+//step2
+guestsVIP.CICERO.pastGifts.push("Golden Lyre");
+
+//step3
+const antonyRegion = guestsVIP.ANTONY.region;
+
+//step4
+delete guestsVIP.CICERO;
