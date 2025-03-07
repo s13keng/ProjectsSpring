@@ -160,3 +160,19 @@ const otherGuests = guests.slice(1);
 otherGuests.sort(); 
 //will combine both the vars
 const sortedGuests = honoredGuests.concat(otherGuests);
+
+const guests = {
+    ANTONY: {
+      title: "General",
+      region: "Rome",
+      dietaryPreference: "Vegetarian",
+      pastGifts: ["Golden Laurel", "Chariot"]
+    },
+    CICERO: {
+      title: "Orator",
+      region: "Arpinum",
+      dietaryPreference: "Omnivore",
+      pastGifts: ["Scroll of Proverbs", "Quill"]
+    }
+  };
+  
