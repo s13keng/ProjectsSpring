@@ -1,5 +1,5 @@
 // codedMessage -let
- let codedMessage = '';
+let codedMessage = '';
 //decodedMessage -let 
 let decodedMessage = '';
 //partyLocation -let  
@@ -199,7 +199,7 @@ delete guestsVIP.CICERO;
 
 //step5
 //given new var to then change the location for anthony 
-const generalProfile = guests.ANTONY;
+const generalProfile = guestsVIP.ANTONY;
 generalProfile.region = "Egypt";
 
 //Q1- The new region will be changed in the original guests list because since its a reference that information that was changed with the new var will change the original and both have the same reference.
