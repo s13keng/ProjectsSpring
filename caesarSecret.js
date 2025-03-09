@@ -209,3 +209,18 @@ generalProfile.region = "Egypt";
 //already declared
 //step1 ex 7
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+//step2
+let encryptedName = "";
+
+for (let i = 0; i < friend.length; i++)
+{
+  const currentLetter = friend[i];
+  const currentIndex = alphabet.indexOf(currentLetter.toLowerCase());
+  const newIndex = (currentIndex + shiftValue) % alphabet.length;
+  encryptedName += alphabet[newIndex].toUpperCase();
+}
+
+//Q1- With a loops it makes it easier and have less code to be able to decrypt the message and change its index value in the alphabet.
+//Q2- THe module or % just helps with the look so once it goes over the last letter it would restart instead of stopping since there no letters after z.
+
