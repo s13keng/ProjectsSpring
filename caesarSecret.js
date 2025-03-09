@@ -177,7 +177,7 @@ const guestsVIP = {
     }
   };
 
-//step1
+//step1 ex 6
 //adding a new object to the array
 guestsVIP.BRUTUS = {
     title: "Senator",
@@ -203,3 +203,9 @@ const generalProfile = guests.ANTONY;
 generalProfile.region = "Egypt";
 
 //Q1- The new region will be changed in the original guests list because since its a reference that information that was changed with the new var will change the original and both have the same reference.
+
+// const friend = "BRUTUS"
+// const shiftValue = 3;
+//already declared
+//step1 ex 7
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
