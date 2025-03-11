@@ -234,4 +234,15 @@ function encryptLetter (letter, shift)
 }
 
 //step2
+function encryptMessage (word, shift)
+{
+  let encryptedMessage = "";
+  for (let i = 0; i < word.length; i++)
+  {
+    encryptedMessage += encryptLetter(word[i], shift);
+  }
+  return encryptedMessage;
+}
+
+//step3
 
