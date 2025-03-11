@@ -10,7 +10,22 @@ function fizzBuzz (n)
   for (let i = 1; i <= n; i++)
   {
     //will see if its able to be divided by those numbers
-    const remainderBy3 = i % 3;
-    const remainderBy5 = i % 5;
+    const divisibleBy3 = i % 3;
+    const divisibleBy5 = i % 5;
 
-    if()
+    if(divisibleBy3 === 0)
+    {
+        console.log("Fizz");
+    }
+      else if (divisibleBy5 === 0)
+    {
+      else if(divisibleBy3 && divisibleBy5 === 0)
+    {
+        console.log("FizzBuzz")
+    }
+        else
+        {
+            console.log(i)
+        }
+    ]
+]
