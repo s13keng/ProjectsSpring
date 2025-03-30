@@ -245,4 +245,11 @@ function encryptMessage (word, shift)
 }
 
 //step3
+//Will wrap around the alphabets once it gets towards the end
+function decryptLetter (letter, shift)
+{
+  const index = alphabet.indexOf(letter.toLowerCase());
+  const newIndex = (index - shift + alphabet.length) % alphabet.length;
+}
 
+//step4
