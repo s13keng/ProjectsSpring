@@ -13,17 +13,17 @@ function fizzBuzz (n)
     const divisibleBy3 = i % 3;
     const divisibleBy5 = i % 5;
 
-    if(divisibleBy3 === 0)
+    if(divisibleBy3 === 0 && divisibleBy5 === 0)
     {
-        console.log("Fizz");
+        console.log("FizzBuzz");
     }
       else if (divisibleBy5 === 0)
     {
       console.log("Buzz");
     }
-      else if (divisibleBy3 === 0 && divisibleBy5 === 0)
+      else if (divisibleBy3 === 0)
     {
-        console.log("FizzBuzz")
+        console.log("Fizz")
     }
        else
         {
