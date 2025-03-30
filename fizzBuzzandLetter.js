@@ -19,11 +19,11 @@ function fizzBuzz (n)
     }
       else if (divisibleBy5 === 0)
     {
-      else if(divisibleBy3 && divisibleBy5 === 0)
+      if (divisibleBy3 && divisibleBy5 === 0)
     {
         console.log("FizzBuzz")
     }
-        else
+       else
         {
             console.log(i)
         }
