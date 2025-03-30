@@ -250,6 +250,7 @@ function decryptLetter (letter, shift)
 {
   const index = alphabet.indexOf(letter.toLowerCase());
   const newIndex = (index - shift + alphabet.length) % alphabet.length;
+  return alphabet[newIndex];
 }
 
 //step4
