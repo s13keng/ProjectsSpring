@@ -19,7 +19,9 @@ function fizzBuzz (n)
     }
       else if (divisibleBy5 === 0)
     {
-      if (divisibleBy3 && divisibleBy5 === 0)
+      console.log("Buzz");
+    }
+      else if (divisibleBy3 === 0 && divisibleBy5 === 0)
     {
         console.log("FizzBuzz")
     }
@@ -29,4 +31,3 @@ function fizzBuzz (n)
         }
       }
     }
-  }
