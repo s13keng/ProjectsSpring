@@ -255,6 +255,7 @@ function decryptLetter (letter)
 }
 
 //step4
+//moves each letter back by 3
 function decryptMessage (word)
 {
   let decryptedMessage = "";
@@ -265,4 +266,4 @@ function decryptMessage (word)
   return decryptedMessage;
 }
 
-//step5
+//Q1 - They will get the input put into the encrypted message once its ran through the decrypt because it would move each letter back back 3.
