@@ -8,7 +8,7 @@ let partyLocation = "Garden";
 let safeToGo="false";
 //his friend
 const friend = "BRUTUS"
-//With Num .isInt it will verify if it is an int n lettershift will always be 3
+//With Num .isInt it will verify if it is an int n letterShift will always be 3
 const letterShift = 3; 
 Number.isInteger(letterShift);
 
@@ -42,7 +42,7 @@ let alphaLength = lowerRoman.length;
 let extLetters = (index + letterShift) % alphaLength;
 const encryptedFirstLetter = lowerRoman[extLetters];
 
-//step6
+//step6 
 const encryptedMessage = "EUXWXV";
 let teaserCode = encryptedMessage.slice(0,3);
 
@@ -213,7 +213,7 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
 //step2
 let encryptedName = "";
-
+//friend is a const for brutus
 for (let i = 0; i < friend.length; i++)
 {
   const currentLetter = friend[i];
@@ -226,31 +226,43 @@ for (let i = 0; i < friend.length; i++)
 //Q2- THe module or % just helps with the look so once it goes over the last letter it would restart instead of stopping since there no letters after z.
 
 //step1 ex8
-function encryptLetter (letter, shift)
+function encryptLetter (letter)
+
 {
   const index = alphabet.indexOf(letter.toLowerCase());
-  const newIndex = (index + shift) % alphabet.length;
+  const newIndex = (index + shiftValue) % alphabet.length;
   return alphabet[newIndex];
 }
 
 //step2
-function encryptMessage (word, shift)
+function encryptMessage (word)
 {
   let encryptedMessage = "";
   for (let i = 0; i < word.length; i++)
   {
-    encryptedMessage += encryptLetter(word[i], shift);
+    encryptedMessage += encryptLetter(word[i], shiftValue);
   }
   return encryptedMessage;
 }
 
 //step3
 //Will wrap around the alphabets once it gets towards the end
-function decryptLetter (letter, shift)
+function decryptLetter (letter)
 {
   const index = alphabet.indexOf(letter.toLowerCase());
-  const newIndex = (index - shift + alphabet.length) % alphabet.length;
+  const newIndex = (index - shiftValue + alphabet.length) % alphabet.length;
   return alphabet[newIndex];
 }
 
 //step4
+function decryptMessage (word)
+{
+  let decryptedMessage = "";
+  for (let i = 0; i < word.length; i++)
+  {
+    decryptedMessage += decryptLetter(word[i], shiftValue);
+  }
+  return decryptedMessage;
+}
+
+//step5
