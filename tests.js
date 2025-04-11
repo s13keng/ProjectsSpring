@@ -8,7 +8,7 @@ function encrypt(message, shiftValue) {
 
     for (let char of message) {
         // Check if the character is in the alphabet
-        const isUpperCase = char === char.toUpperCase();
+        const isUpperChar = char === char.toUpperChar();
         const lowerChar = char.toLowerCase();
 
         if (alphabet.includes(lowerChar)) {
@@ -19,7 +19,7 @@ function encrypt(message, shiftValue) {
 
             // Append the shifted character (preserve case)
             const newChar = alphabet[newIndex];
-            encryptedMessage += isUpperCase ? newChar.toUpperCase() : newChar;
+            encryptedMessage += isUpperChar ? newChar.toUpperChar() : newChar;
 
             // Increment the counter for valid characters
             counter++;
@@ -65,6 +65,7 @@ function decrypt(encryptedMessage, shiftValue) {
 
             // Append the shifted character (preserve case)
             const newChar = alphabet[newIndex];
+            // ? is a shorthand of if else
             decryptedMessage += isUpperCase ? newChar.toUpperCase() : newChar;
         } else {
             // Non-alphabet character, append as is
@@ -82,3 +83,9 @@ const originalMessage = prompt("WHATS your message?");
 // Encrypt the message
 const encryptedMessage = encrypt(originalMessage, shiftValue);
 console.log("Encrypted Message:", encryptedMessage);
+
+
+// Decrypt the message
+const decryptedMessage = decrypt(encryptedMessage, shiftValue);
+console.log("Decrypted Message:", decryptedMessage);
+
