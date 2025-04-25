@@ -56,11 +56,12 @@ function seventhTask ()
 //Task8
 function eigthTask ()
 {
-
-    document.getElementById("task8").appendChild()
+    const newButton =document.createElement("button")
+    newButton.innerText = "Button"
+    document.getElementById("task8").appendChild(newButton)
 }
 //Task9
 function ninthTask()
 {
-    
+    const 
 }
