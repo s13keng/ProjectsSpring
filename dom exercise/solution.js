@@ -6,11 +6,18 @@ function firstTask ()
 //Task2
 function secondTask ()
 {
-    document.getElementById("task2").innerHTML = "<button>Submit</button>"
+    document.getElementById("task2").innerHTML = "<button>Submit</button>";
 }
 //Task3
 function thirdTask ()
 {
-    document.body.style.backgroundColor = '#232323'
+    document.body.style.backgroundColor = '#232323';
 }
-Tas
+//Task4
+function forthTask ()
+{
+   const listOfE  = document.querySelectorAll("item")
+    listOfE.style.border (3px solid black);
+
+
+}
