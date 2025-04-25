@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function ()
+{
+//function testAllTasks ()
+{
+	firstTask();
+	secondTask();
+	thirdTask();
+	forthTask();
+	fifthTask();
+	sixthTask();
+	seventhTask();
+	eigthTask();
+    ninthTask();
+}});
+
 //Task 1
 function firstTask ()
 {
@@ -29,7 +44,7 @@ function fifthTask ()
 //Task6
 function sixthTask ()
 {
-    document.getElementById("task6").value = 'Dom Master';
+    document.getElementById("task6").value = 'DOM Master';
 }
 //Task7
 function seventhTask ()
@@ -41,5 +56,11 @@ function seventhTask ()
 //Task8
 function eigthTask ()
 {
-    document.getElementById("task8").appendChild
+
+    document.getElementById("task8").appendChild()
+}
+//Task9
+function ninthTask()
+{
+    
 }
