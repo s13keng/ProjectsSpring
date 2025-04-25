@@ -63,5 +63,6 @@ function eigthTask ()
 //Task9
 function ninthTask()
 {
-    const 
+    const forTask = document.getElementById("task9");
+    forTask.parentNode.removeChild(task9);
 }
