@@ -16,8 +16,30 @@ function thirdTask ()
 //Task4
 function forthTask ()
 {
-   const listOfE  = document.querySelectorAll("item")
-    listOfE.style.border (3px solid black);
-
-
+    document.querySelectorAll(".item").forEach(item =>
+        {
+            item.style.border = "2px solid black";
+        });
+}
+//Task5
+function fifthTask ()
+{
+    document.getElementById("task5").href = 'https://www.springboard.com/';
+}
+//Task6
+function sixthTask ()
+{
+    document.getElementById("task6").value = 'Dom Master';
+}
+//Task7
+function seventhTask ()
+{
+    document.getElementById("task7").classList.add('new-class');
+    //to see if it contains new class which it responds with true
+    document.getElementById("task7").classList.contains('new-class');
+}
+//Task8
+function eigthTask ()
+{
+    document.getElementById("task8").appendChild
 }
