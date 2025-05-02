@@ -16,5 +16,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		const box = document.createElement("div");
         //set it attribute to 
 		box.setAttribute("data-box-id", boxIdCounter.toString()); 
-        box.
-}
+        //text is 
+        box.textContent = `box ${boxIdCounter}`;
+    }
+});
