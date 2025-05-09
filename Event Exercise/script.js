@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function ()
     let boxColor = null; 
 	let boxIdCounter = 0; 
 
-    //
+    //box Container
 	function addNewBox ()
 	{
 		const box = document.createElement("div");
@@ -26,14 +26,22 @@ document.addEventListener("DOMContentLoaded", function ()
 
         boxIdCounter++; //continue counting the 
     }
-
+    //colorForm
     colorForm.addEventListener("submit",function(event){
         event.preventDefault();
-        const newColor = colorInput.ariaValueMax.trim();
+        //get rid of spaces
+        const newColor = colorInput.value.trim();
+        //To select all boxes so that they all stay the same
         const boxes = document.querySelector(".box");
-            for (const box of boxes)
-
-
+            for (const box of boxes){
+                box.style.backgrounfColor = newColor;
+            }
+        //After a color were selected to clear box 
+        colorInput.value = " ";
+        //will change the current selected color to the new one
+        boxColor = newColor;
 
     });
+    //newBoxButton
+    newBoxButton.
 });
