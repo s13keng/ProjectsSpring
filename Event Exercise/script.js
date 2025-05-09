@@ -16,7 +16,12 @@ document.addEventListener("DOMContentLoaded", function ()
 		const box = document.createElement("div");
         //set it attribute to 
 		box.setAttribute("data-box-id", boxIdCounter.toString()); 
-        //text is 
+        //text is after box Id gets set to its data attrib and sets its box Id as text
         box.textContent = `box ${boxIdCounter}`;
+        box.className = "box";
+
+        box.style.backgroundColor = boxColor;
+        
+        boxIdCounter++;
     }
 });
