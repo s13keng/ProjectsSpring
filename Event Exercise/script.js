@@ -19,9 +19,21 @@ document.addEventListener("DOMContentLoaded", function ()
         //text is after box Id gets set to its data attrib and sets its box Id as text
         box.textContent = `box ${boxIdCounter}`;
         box.className = "box";
-
+        //Will continue using the set color
         box.style.backgroundColor = boxColor;
-        
-        boxIdCounter++;
+        //to append as a child to box container ele
+        boxContainer.appendChild(box);
+
+        boxIdCounter++; //continue counting the 
     }
+
+    colorForm.addEventListener("submit",function(event){
+        event.preventDefault();
+        const newColor = colorInput.ariaValueMax.trim();
+        const boxes = document.querySelector(".box");
+            for (const box of boxes)
+
+
+
+    });
 });
