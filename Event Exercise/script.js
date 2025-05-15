@@ -57,4 +57,12 @@ document.addEventListener("DOMContentLoaded", function ()
 		}
 	});
     
+    document.addEventListener("mouseover", function (event)
+    //will show coordinates
+	{
+        if (event.target.classList.contains("box"))
+		{
+			event.target.textContent = `x: ${event.pageX}, y: ${event.pageY}`;
+        }
+    });
 });
