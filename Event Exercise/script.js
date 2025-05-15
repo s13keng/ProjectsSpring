@@ -65,4 +65,27 @@ document.addEventListener("DOMContentLoaded", function ()
 			event.target.textContent = `x: ${event.pageX}, y: ${event.pageY}`;
         }
     });
+    document.addEventListener("mouseout", function (event)
+    //bring back the text using Id from the data attr
+	{
+        if (event.target.classList.contains("box"))
+		{
+			const boxId = event.target.getAttribute("data-box-id");
+			event.target.textContent = `Box ${boxId}`;
+		}
+	});
+    window.addEventListener("keydown", function (event)
+    // will ignores key presses made for color input
+	{
+		if (event.target.id === "color-input")
+		{
+			return;
+        }
+        
+		//either n will create a new box
+		if (event.key === "n" || event.key === "N")
+		{
+			addNewBox(); 
+		}
+	});
 });
