@@ -43,5 +43,18 @@ document.addEventListener("DOMContentLoaded", function ()
 
     });
     //newBoxButton
-    newBoxButton.
+    newBoxButton.addEventListener("click", function ()
+    //When clicked it will make a new box
+	{
+		addNewBox();
+	});
+
+	document.addEventListener("dblclick", function (event)
+    //with double clicking it will remove the box
+	{
+		if (event.target.classList.contains("box")){
+			event.target.remove(); 
+		}
+	});
+    
 });
