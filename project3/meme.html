@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    <style>
+        .meme_generator {
+            margin: 20px auto;
+            width: 380px;
+            font-family: sans-serif;
+        }
+
+    </style>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +19,21 @@
             <script src="meme.js"></script>
     </head>
     <body>
-        <div class="meme_generator">
-            <label>Select an Image</label>
-            <input type=""file id="imgInput">
-            <label>Top Text</label>
-            <input type="text" id="topText">
-            <label>Bottom Text</label>
-            <input type="text" id="bottomText">
-
-            <canvas id="meme"></canvas>
-        </div>
+        <h1>Meme Generator</h1>
+        <form id="memeForm">
+            <div class="meme_generator">
+            <!--input for img-->
+                <label for="imageUrl">Imgage URL here:</label>
+                <input type="url" id="imgInput">
+            <!--for top text-->
+                <label for="topText">Top Text:</label>
+                <input type="text" id="topText">
+            <!--for bottom text-->
+                <label for="bottomText">Bottom Text:</label>
+                <input type="text" id="bottomText">
+                
+            </div>
+        </form>
         <script src="meme.js"></script>
     </body>
         </html>
