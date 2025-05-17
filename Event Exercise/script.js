@@ -14,31 +14,32 @@ document.addEventListener("DOMContentLoaded", function ()
 	function addNewBox ()
 	{
 		const box = document.createElement("div");
-        //set it attribute to 
+    //set it attribute to 
 		box.setAttribute("data-box-id", boxIdCounter.toString()); 
-        //text is after box Id gets set to its data attrib and sets its box Id as text
+    //text is after box Id gets set to its data attrib and sets its box Id as text
         box.textContent = `box ${boxIdCounter}`;
         box.className = "box";
-        //Will continue using the set color
+    //Will continue using the set color
         box.style.backgroundColor = boxColor;
-        //to append as a child to box container ele
+    //to append as a child to box container ele
         boxContainer.appendChild(box);
 
-        boxIdCounter++; //continue counting the 
+        boxIdCounter++; 
+    //continue counting the 
     }
     //colorForm
     colorForm.addEventListener("submit",function(event){
         event.preventDefault();
-        //get rid of spaces
+    //get rid of spaces
         const newColor = colorInput.value.trim();
-        //To select all boxes so that they all stay the same
+    //To select all boxes so that they all stay the same
         const boxes = document.querySelector(".box");
             for (const box of boxes){
                 box.style.backgrounfColor = newColor;
             }
-        //After a color were selected to clear box 
+    //After a color were selected to clear box 
         colorInput.value = " ";
-        //will change the current selected color to the new one
+    //will change the current selected color to the new one
         boxColor = newColor;
 
     });
