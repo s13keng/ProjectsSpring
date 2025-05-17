@@ -54,3 +54,11 @@ input[type="url"], input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.meme {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+.meme img {
+    max-width: 100%;
+}
