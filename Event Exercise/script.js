@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function ()
 	const newBoxButton = document.getElementById("new-box-button");
 	const colorForm = document.getElementById("color-form");
 	const colorInput = document.getElementById("color-input");
-    //step 3 ,var to store values for each one
+    //step 3 ,var to store values for each one and starting point
     let boxColor = null; 
 	let boxIdCounter = 0; 
 
@@ -25,11 +25,11 @@ document.addEventListener("DOMContentLoaded", function ()
         boxContainer.appendChild(box);
 
         boxIdCounter++; 
-    //continue counting the 
+    //continue counting the boxes 
     }
     //colorForm
-    colorForm.addEventListener("submit",function(event){
-        event.preventDefault();
+    colorForm.addEventListener("submit",function(e){
+        e.preventDefault();
     //get rid of spaces
         const newColor = colorInput.value.trim();
     //To select all boxes so that they all stay the same
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function ()
                 box.style.backgrounfColor = newColor;
             }
     //After a color were selected to clear box 
-        colorInput.value = " ";
+        colorInput.value = "";
     //will change the current selected color to the new one
         boxColor = newColor;
 
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function ()
         }
         
 		//either n will create a new box
-		if (event.key === "n" || event.key === "N")
+		if (event.key === "n" && event.key === "N")
 		{
 			addNewBox(); 
 		}
