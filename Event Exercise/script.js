@@ -44,40 +44,40 @@ document.addEventListener("DOMContentLoaded", function ()
 
     });
     //newBoxButton
-    newBoxButton.addEventListener("click", function ()
+    newBoxButton.addEventListener("click", function (){
     //When clicked it will make a new box
-	{
+	
 		addNewBox();
 	});
 
-	document.addEventListener("dblclick", function (event)
+	document.addEventListener("dblclick", function (event){
     //with double clicking it will remove the box
-	{
+	
 		if (event.target.classList.contains("box")){
 			event.target.remove(); 
 		}
 	});
     
-    document.addEventListener("mouseover", function (event)
+    document.addEventListener("mouseover", function (event){
     //will show coordinates
-	{
+	
         if (event.target.classList.contains("box"))
 		{
 			event.target.textContent = `x: ${event.pageX}, y: ${event.pageY}`;
         }
     });
-    document.addEventListener("mouseout", function (event)
+    document.addEventListener("mouseout", function (event){
     //bring back the text using Id from the data attr
-	{
+	
         if (event.target.classList.contains("box"))
 		{
 			const boxId = event.target.getAttribute("data-box-id");
 			event.target.textContent = `Box ${boxId}`;
 		}
 	});
-    window.addEventListener("keydown", function (event)
+    window.addEventListener("keydown", function (event){
     // will ignores key presses made for color input
-	{
+	
 		if (event.target.id === "color-input")
 		{
 			return;
