@@ -47,7 +47,14 @@ button:hover {
     background-color: #fac3e9;
 }
 
-input[type="url"], input[type="text"] {
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -64,6 +71,18 @@ input[type="url"], input[type="text"] {
     max-width: 100%;
     
 }
-.meme .top-text{
+.meme .top-text {
     top: 30px;
+}
+
+.meme .bottom-text {
+    bottom: 30px;
+}
+.meme .top-text, .meme .bottom-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 39px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
 }
