@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function ()
 	let boxIdCounter = 0; 
 
     //box Container
-	function addNewBox ()
-	{
+	function addNewBox (){
 		const box = document.createElement("div");
     //set it attribute to 
 		box.setAttribute("data-box-id", boxIdCounter.toString()); 
@@ -33,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function ()
     //get rid of spaces
         const newColor = colorInput.value.trim();
     //To select all boxes so that they all stay the same
-        const boxes = document.querySelector(".box");
+        const boxes = document.querySelectorAll(".box");
             for (const box of boxes){
                 box.style.backgrounfColor = newColor;
             }
