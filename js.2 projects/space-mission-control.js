@@ -4,16 +4,22 @@ let oneTimeTasks = [];
 let monitoringTaskId;
 // Task 2: Add One-Time Task Function
 function addOneTimeTask (func, delay)
-{
-	oneTimeTasks.push({function: func, delay: delay});
+
 	// TODO: Write a function named `addOneTimeTask` that accepts a function (`func`) and a delay (`delay`) as parameters. This function should add an object containing both parameters into the `oneTimeTasks` array.
+{
+		oneTimeTasks.push({function: func, delay: delay});
 }
 
 // Task 3: Run One-Time Tasks Function
 function runOneTimeTasks ()
 {
-	// TODO: Create a function named `runOneTimeTasks` that iterates over the `oneTimeTasks` array and uses `setTimeout` to schedule each task according to its delay.
+	for (const oneTimeTask of oneTimeTasks)
+	{
+		setTimeout(oneTimeTask.function, oneTimeTask.delay);
+	}
 }
+	// TODO: Create a function named `runOneTimeTasks` that iterates over the `oneTimeTasks` array and uses `setTimeout` to schedule each task according to its delay.
+
 
 // Task 4: Start Monitoring Function
 function startMonitoring ()
