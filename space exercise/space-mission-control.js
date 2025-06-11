@@ -40,8 +40,7 @@ function startMonitoring ()
 				const communicationCheck = Math.random() > 0.05 ? "Systems are good" : "Communication error"; 
 
 			console.log(`Oxygen Level: ${oxygenLevel.toFixed(2)}% | Power Status: ${powerStatus} | Communication: ${communicationCheck}`);
-		},2000 
-		//3000 a little too long
+		},2000
 	); 
 }
 	// TODO: Write a function named `startMonitoring` that uses `setInterval` to simulate continuous monitoring. This function should print a message every few seconds and store the interval ID in `monitoringTaskId`.
