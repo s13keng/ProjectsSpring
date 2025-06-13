@@ -5,12 +5,12 @@ const users = [
 	{firstName: "Charlie", lastName: "Brown", points: 180}
 ];
 		//must have 100pts to be premium
-	const usersWithStatus = users.map(user => {
+	const usersWithMembership = users.map(user => {
 		const fullName = `${user.firstName} ${user.lastName}`;
 		const membershipStatus = user.points > 100 ? 'Premium' : 'Standard';
 			return {fullName, membershipStatus };
 	});
 		//will give the full name of the user and their memebership status on console already printed
-	console.log(usersWithStatus);
+	console.log(usersWithMembership);
 						  
 
