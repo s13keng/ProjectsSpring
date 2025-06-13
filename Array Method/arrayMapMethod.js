@@ -1,9 +1,10 @@
+		//Given list of people and points.
 const users = [
 	{firstName: "Alice", lastName: "Johnson", points: 120},
 	{firstName: "Bob", lastName: "Smith", points: 99},
 	{firstName: "Charlie", lastName: "Brown", points: 180}
 ];
-
+		//must have 100pts to be premium
 	const usersWithStatus = users.map(user => {
 		const fullName = `${user.firstName} ${user.lastName}`;
 		const membershipStatus = user.points > 100 ? 'Premium' : 'Standard';
