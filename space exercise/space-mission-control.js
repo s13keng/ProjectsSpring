@@ -73,7 +73,8 @@ function startCountdown (duration)
 				console.log("Blast off!! ");
 			}
 		},
-		1000
+		 1000
+		
 	);
 }
 		// TODO: Create a function named `startCountdown` that takes a duration parameter. Use `setInterval` to decrease the countdown every second and print the remaining time. Use `clearInterval` to stop the countdown when it reaches zero, printing a "Liftoff!" message.
