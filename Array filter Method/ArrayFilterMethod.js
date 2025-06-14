@@ -8,3 +8,12 @@ const planets = [
 	{name: "Uranus", temperature: 78, distance: 19.22},
 	{name: "Neptune", temperature: 73, distance: 30.05}
 ];
+const habitablePlanets = planets.filter(function (planet)
+		//will make sure if it passes parameters then it will be save to habit 
+	{
+		return planet.temperature >= 253 && planet.temperature <= 323 &&
+		       planet.distance >= 0.75 && planet.distance <= 1.5;
+	}
+);
+
+console.log(habitablePlanets);
