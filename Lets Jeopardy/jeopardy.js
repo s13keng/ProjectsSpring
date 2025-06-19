@@ -52,7 +52,6 @@ Category: The name given to the structure containing clues on the same topic.
 const API_URL = "https://rithm-jeopardy.herokuapp.com/api/"; // The URL of the API.
 const NUMBER_OF_CATEGORIES = 6; // The number of categories you will be fetching. You can change this number.
 const NUMBER_OF_CLUES_PER_CATEGORY = 5; // The number of clues you will be displaying per category. You can change this number.
-
 let categories = []; // The categories with clues fetched from the API.
 /*
 [
@@ -92,12 +91,14 @@ $("#play").on("click", handleClickOfPlay);
  * Hints:
  * - Sets up the game when the play button is clickable.
  */
+
 //First Question?
+
 function handleClickOfPlay ()
 {
   // todo set the game up if the play button is clickable
   if (!isPlayButtonClickable) return;
-    isPlayButtonClickable = false;
+  isPlayButtonClickable = true;
   setupTheGame();
 }
 
@@ -112,15 +113,19 @@ function handleClickOfPlay ()
  * Hints:
  * - The game play is managed via events.
  */
+
+//Question 2
+
 async function setupTheGame ()
 {
   // todo show the spinner while setting up the game
-
+  document.getElementById('spinner').style.display = 'block';
   // todo reset the DOM (table, button text, the end text)
-
+  resetGameDOM();
   // todo fetch the game data (categories with clues)
-
+  const categories = await fetchGameData();
   // todo fill the table
+  fillTable(categories);
 }
 
 /**
@@ -131,6 +136,9 @@ async function setupTheGame ()
  * - Use /categories endpoint of the API.
  * - Request as many categories as possible, such as 100. Randomly pick as many categories as given in the `NUMBER_OF_CATEGORIES` constant, if the number of clues in the category is enough (<= `NUMBER_OF_CLUES` constant).
  */
+
+//Question 3
+
 async function getCategoryIds ()
 {
   const ids = []; // todo set after fetching
@@ -162,6 +170,9 @@ async function getCategoryIds ()
  * - Use /category endpoint of the API.
  * - In the API, not all clues have a value. You can assign your own value or skip that clue.
  */
+
+//Question 4
+
 async function getCategoryData (categoryId)
 {
   const categoryWithClues = {
@@ -187,6 +198,9 @@ async function getCategoryData (categoryId)
  *   Besides, for each clue in a category, you should create a row element (tr) and append it to the corresponding previously created and appended cell element (td).
  * - To this row elements (tr) should add an event listener (handled by the `handleClickOfClue` function) and set their IDs with category and clue IDs. This will enable you to detect which clue is clicked.
  */
+
+//Question 5
+
 function fillTable (categories)
 {
   // todo
@@ -205,6 +219,9 @@ $(".clue").on("click", handleClickOfClue);
  * - Don't forget to update the `activeClueMode` variable.
  *
  */
+
+//Question 6
+
 function handleClickOfClue (event)
 {
   // todo find and remove the clue from the categories
@@ -224,6 +241,9 @@ $("#active-clue").on("click", handleClickOfActiveClue);
  * - After clearing, check the categories array to see if it is empty to decide to end the game.
  * - Don't forget to update the `activeClueMode` variable.
  */
+
+//Question 7
+
 function handleClickOfActiveClue (event)
 {
   // todo display answer if displaying a question
