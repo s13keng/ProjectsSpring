@@ -12,3 +12,10 @@ const firstWaterCreature = mythicalCreatures.find(
 	}
 );
 console.log(firstWaterCreature.name);
+const griffinIndex = mythicalCreatures.findIndex(
+	function (creature)
+	{
+		return creature.name === "Griffin";
+	}
+);
+console.log(griffinIndex);
