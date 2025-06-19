@@ -15,14 +15,24 @@ const locations = {
 const {
 	first,
 	second,
-	...remaining
+	...remaining //rest are caught in remaining
 } = locations;
+console.log("Key locations:", first, "and", second);
+//console log will give first and second
+
 /* Task 3: The Mysterious Door */
 const doorCode = {
 	upper: "Alpha",
 	lower: "Omega"
 };
 // TODO: To open the Mysterious Door, a sequence is required, which might be incomplete. Use object destructuring to assign default values to ensure the door opens even if part of the code is missing. Make sure the `middle` defaults to one of the values from the `remaining` variable above if not provided. Print the door code sequence.
+const {
+	upper,
+	lower,
+	middle = remaining.third // default to a value from remaining
+} = doorCode;
+
+console.log("Door code sequence:", upper, middle, lower);
 
 /* Task 4: The Guardian's Riddle */
 const riddle = {
@@ -30,15 +40,17 @@ const riddle = {
 	modernWord: "Cat"
 };
 // TODO: The guardian of an ancient library speaks in riddles. Use object destructuring to rename `ancientWord` to `translation` in the `riddle` object. Print the translation of the riddle.
-
+const {ancientWord: translation} = riddle;
+console.log("The guardian says", translation);
 /* Task 5: The Array of Elements */
 const elements = ["Fire", "Water", "Earth", "Air"];
 // TODO: Inside the library, Destructo discovers an array that represents the elements needed to decipher the next clue. Use array destructuring to extract the first two elements. Print the essential elements.
-
+const [firstElement, secondElement] = elements;
+console.log(`Essential elements: ${firstElement}, ${secondElement}`);
 /* Task 6: Skipping Stones */
 const stones = [1, 2, 3, 4, 5, 6];
 // TODO: Crossing the River of Reflections requires skipping certain stones. Use array destructuring to extract only the first and the sixth stones. Print the extracted stones.
-
+const [firstStone, , , , , sixthStone] =
 /* Task 7: The Array of Shadows */
 const shadows = ["Darkness", "Silence", "Whisper", "Echo"];
 // TODO: The Cave of Shadows hides more than it reveals. Use array destructuring with the rest parameter to separate the visible shadow (which is the first) from the hidden ones. Print the visible shadow and the hidden shadows.
