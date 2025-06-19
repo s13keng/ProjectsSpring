@@ -19,3 +19,11 @@ const griffinIndex = mythicalCreatures.findIndex(
 	}
 );
 console.log(griffinIndex);
+
+const enchantedForestCreature = mythicalCreatures.find(
+	function (creature)
+	{
+		return creature.lastSeen === "Enchanted Forest";
+	}
+);
+console.log(enchantedForestCreature.name);
