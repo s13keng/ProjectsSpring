@@ -121,7 +121,7 @@ async function setupTheGame ()
   // todo show the spinner while setting up the game
   document.getElementById('spinner').style.display = 'block';
   // todo reset the DOM (table, button text, the end text)
-  resetGameDOM();
+  resetDOM();
   // todo fetch the game data (categories with clues)
   const categories = await fetchGameData();
   // todo fill the table
