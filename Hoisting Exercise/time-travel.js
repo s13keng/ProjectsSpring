@@ -13,15 +13,15 @@ console.log(`Travel Date: ${travelDate}`);
 /*
  * Observations:
  * TODO: Explain here.
- * It will cause an error because its a const in order to fix that we can use let.
+ * It will cause an error because its a const and they can not be reassigned in order to fix that we can use let instead.
  */
 
 /* Task 4: Experiment with Variable Hoisting */
 // TODO: Before declaring any variable, try to print a variable named `timeMachineModel` to the console. Then, declare `timeMachineModel` using `var` and assign it the value `"T-800"`. Observe and explain what happens as a comment.
-print('timeMachineModel')
+console.log(`Time Machine Model: ${timeMachineModel}`);
 var timeMachineModel = "T-800";
 /*
  * Observations:
  * TODO: Explain here.
- * For me since im using a html file to view the console, I got a pop up to print out my html page.
+ * It will print out Time machine model was undefined instead of showing its var value because the Console.log was ran before we declared the variable.
  */
