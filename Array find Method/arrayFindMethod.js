@@ -5,3 +5,9 @@ const mythicalCreatures = [
 	{name: "Griffin", type: "Air", lastSeen: "Highwind Mountains"},
 	{name: "Kraken", type: "Water", lastSeen: "Abyssal Depths"}
 ];
+const firstWaterCreature = mythicalCreatures.find(
+	function (creature)
+	{
+		return creature.type === "Water";
+	}
+);
