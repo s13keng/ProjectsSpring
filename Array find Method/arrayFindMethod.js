@@ -11,3 +11,4 @@ const firstWaterCreature = mythicalCreatures.find(
 		return creature.type === "Water";
 	}
 );
+console.log(firstWaterCreature.name);
