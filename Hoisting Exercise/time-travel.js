@@ -18,7 +18,8 @@ console.log(`Travel Date: ${travelDate}`);
 
 /* Task 4: Experiment with Variable Hoisting */
 // TODO: Before declaring any variable, try to print a variable named `timeMachineModel` to the console. Then, declare `timeMachineModel` using `var` and assign it the value `"T-800"`. Observe and explain what happens as a comment.
-console.log('timeMachineModel')
+print('timeMachineModel')
+var timeMachineModel = "T-800";
 /*
  * Observations:
  * TODO: Explain here.
