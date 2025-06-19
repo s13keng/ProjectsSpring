@@ -13,7 +13,7 @@ console.log(`Travel Date: ${travelDate}`);
 /*
  * Observations:
  * TODO: Explain here.
- * //It will cause an error because its a const in order to fix that we can use let.
+ * It will cause an error because its a const in order to fix that we can use let.
  */
 
 /* Task 4: Experiment with Variable Hoisting */
@@ -23,4 +23,5 @@ var timeMachineModel = "T-800";
 /*
  * Observations:
  * TODO: Explain here.
+ * For me since im using a html file to view the console, I got a pop up to print out my html page.
  */
