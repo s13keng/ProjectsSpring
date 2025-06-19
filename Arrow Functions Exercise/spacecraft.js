@@ -1,6 +1,6 @@
 /* Task 1: No Parameters: Activate Hyperdrive */
 // TODO: Write an arrow function named `activateHyperdrive` with no parameters that print `"Hyperdrive activated!"` to the console. Call `activateHyperdrive` to test it.
-
+const activateHyperdrive = () => console.log("Hyperdrive activated!");
 /* Task 2: Implicit Return: Scan for Lifeforms */
 // TODO: Create an arrow function named `scanForLife` that implicitly returns `"No lifeforms detected"` without using curly braces. Print the result of calling `scanForLife`.
 
