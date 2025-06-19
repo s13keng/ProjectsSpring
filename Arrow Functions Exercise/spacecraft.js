@@ -14,17 +14,15 @@ console.log(currentCoordinates());
 // TODO: Inside an object named `spacecraft`, create a method named `receiveMessage` using arrow function syntax. This method should log `"Message received: "` followed by a message it receives as a parameter. Directly call `receiveMessage` within `spacecraft` and observe. Observe and explain the behavior of `this` in this context as a comment.
 
 const spacecraft = {
-    name: 'King Seiko',
 	receiveMessage: (message) =>
 	{
         console.log(`Message received: ${message}`);
-        console.log(`This spacecraft is: ${this.name}`);
     }
 
 };
-spacecraft.receiveMessage("Grand?!");
+spacecraft.receiveMessage("King Seiko!");
 
  /* Observations:
  * TODO: Explain here.
- *In this contect to be able to call name of ship does not refer to the spacecraft object. Since arrow fuctions dont work with this so its technically  undefined and thats why is shows blank.
+ *In this contect to be able to call the message from within spacecraft and show what the message had inside.
  */
