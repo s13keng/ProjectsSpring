@@ -16,7 +16,16 @@ const rhinoStatus = {
 	population: 500,
 	status: "Endangered"
 };
+
 // TODO: You are given an object representing an animal's conservation status. Use the spread operator to update this status with new information, such as an increase in population or a change in habitat.
+const updatedRhinoStatus = {
+	...rhinoStatus, 
+	population: 4502,
+	status: "Not Endangered"
+};
+
+console.log("Increased Rhino Status:", updatedRhinoStatus);
+
 
 /* Task 4: Catalog Genetic Diversity */
 const lionProfile = {
