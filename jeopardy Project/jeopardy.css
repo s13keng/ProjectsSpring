@@ -3,16 +3,7 @@ body {
   text-align: center;
   background-color: #046498;
   color: white;
-  padding: 20px;
-/* Favorite Watch dial*/
-  background-image: url('sje115.jpeg'); 
-/*image will cover the screen */    
-  background-size: cover;                 
-  background-repeat: no-repeat;    
-/* to centers the image */       
-  background-position: center center;   
-/* optional: makes background stay fixed */    
-  background-attachment: fixed;          
+  padding: 20px;         
   }
 
 /*button specs*/
