@@ -49,8 +49,7 @@ button {
 #jeopardy td:hover {
   background-color: #059a4b;
 }
+/*Will change the color for when its answered it be known*/
 .answered {
   background-color: red !important;
-  color: white;
-  cursor: default;
 }
