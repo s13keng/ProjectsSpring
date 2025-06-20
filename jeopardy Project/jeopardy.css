@@ -1,48 +1,51 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-    background-image: url('your-image.jpg'); /* replace with your image file */
-    background-size: cover;                 /* makes image cover the screen */
-    background-repeat: no-repeat;           /* prevents repeating */
-    background-position: center center;     /* centers the image */
-    background-attachment: fixed;           /* optional: makes background stay fixed */
-    }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+/* Favorite Watch dial*/
+  background-image: url('sje115.jpeg'); 
+/*image will cover the screen */    
+  background-size: cover;                 
+  background-repeat: no-repeat;    
+/* to centers the image */       
+  background-position: center center;   
+/* optional: makes background stay fixed */    
+  background-attachment: fixed;          
   }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  #jeopardy {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: 90%;
-    max-width: 1000px;
-  }
-  
-  #jeopardy th,
-  #jeopardy td {
-    border: 2px solid white;
-    padding: 20px;
-    width: 150px;
-    height: 100px;
-    background-color: #1a1aff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  #jeopardy th {
-    background-color: #0e8198;
-    font-size: 18px;
-  }
-  
-  #jeopardy td:hover {
-    background-color: #09c4d5;
-  }
-  
+
+/*button specs*/
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#jeopardy {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 1000px;
+}
+/*Colors for inner rows of the game*/
+#jeopardy th,
+#jeopardy td {
+  border: 2px solid white;
+  padding: 20px;
+  width: 150px;
+  height: 100px;
+  background-color: #0cc4ed;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*Top row holding categories*/
+#jeopardy th {
+  background-color: #0e8198;
+  font-size: 18px;
+}
+/*When over slot*/
+#jeopardy td:hover {
+  background-color: #059a4b;
+}
