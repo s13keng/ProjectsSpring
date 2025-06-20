@@ -49,7 +49,9 @@ async function setupAndRender() {
 }
 
 function fillTable() {
+  //catertories
   const $catRow = document.getElementById('categories-row');
+  //questions
   const $body = document.getElementById('clues-body');
 
   $catRow.innerHTML = '';
