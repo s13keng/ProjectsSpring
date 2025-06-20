@@ -85,6 +85,8 @@ function handleClick(evt) {
   } else if (clue.showing === 'question') {
     td.innerText = clue.answer;
     clue.showing = 'answer';
+    td.classList.add('answered');
+
   }
 }
 

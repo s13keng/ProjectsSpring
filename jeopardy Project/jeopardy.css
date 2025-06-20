@@ -49,3 +49,8 @@ button {
 #jeopardy td:hover {
   background-color: #059a4b;
 }
+.answered {
+  background-color: red !important;
+  color: white;
+  cursor: default;
+}
