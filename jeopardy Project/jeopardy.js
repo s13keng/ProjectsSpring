@@ -65,7 +65,7 @@ function fillTable() {
     const tr = document.createElement('tr');
     for (let j = 0; j < NUM_CATEGORIES; j++) {
       const td = document.createElement('td');
-      td.innerText ='100';
+      td.innerText = `$${(i + 1) * 100}`;
       td.setAttribute('data-cat', j);
       td.setAttribute('data-clue', i);
       td.addEventListener('click', handleClick);
