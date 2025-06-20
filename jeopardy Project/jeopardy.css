@@ -5,6 +5,14 @@ body {
   color: white;
   padding: 20px;         
   }
+  body {
+    background-image: url('background.jpg'); /* Replace with your actual image filename */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: makes the background stay fixed when scrolling */
+    color: white; /* Optional: improves readability depending on image */
+  }
 
 /*button specs*/
 button {
