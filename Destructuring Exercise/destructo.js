@@ -2,7 +2,8 @@
 const coordinates = {x: 34, y: 42, z: 67};
 // TODO: Destructo has found a map with coordinates marked on it. Use object destructuring to extract the `x` and `y` coordinates from the given `coordinates` object. Print the coordinates.
 const {x, y} = coordinates;
-console.log(`Coordinates found: x-axis =${x}, y-axis =${y}`);
+
+	console.log(`Coordinates found: x-axis =${x}, y-axis =${y}`);
 
 /* Task 2: The Map of Secrets */
 const locations = {
@@ -17,7 +18,9 @@ const {
 	second,
 	...remaining //rest are caught in remaining
 } = locations;
-console.log("Key locations:", first, "and", second);
+
+	console.log("Key locations:", first, "and", second);
+
 //console log will give first and second
 
 /* Task 3: The Mysterious Door */
@@ -32,7 +35,7 @@ const {
 	middle = remaining.third // default to a value from remaining
 } = doorCode;
 
-console.log("Door code sequence:", upper, middle, lower);
+	console.log("Door code sequence:", upper, middle, lower);
 
 /* Task 4: The Guardian's Riddle */
 const riddle = {
@@ -41,32 +44,62 @@ const riddle = {
 };
 // TODO: The guardian of an ancient library speaks in riddles. Use object destructuring to rename `ancientWord` to `translation` in the `riddle` object. Print the translation of the riddle.
 const {ancientWord: translation} = riddle;
-console.log("The guardian says", translation);
+
+	console.log("The guardian says", translation);
+
 /* Task 5: The Array of Elements */
 const elements = ["Fire", "Water", "Earth", "Air"];
 // TODO: Inside the library, Destructo discovers an array that represents the elements needed to decipher the next clue. Use array destructuring to extract the first two elements. Print the essential elements.
 const [firstElement, secondElement] = elements;
-console.log(`Essential elements: ${firstElement}, ${secondElement}`);
+
+	console.log(`Essential elements: ${firstElement}, ${secondElement}`);
+
 /* Task 6: Skipping Stones */
 const stones = [1, 2, 3, 4, 5, 6];
 // TODO: Crossing the River of Reflections requires skipping certain stones. Use array destructuring to extract only the first and the sixth stones. Print the extracted stones.
-const [firstStone, , , , , sixthStone] =
+const [firstStone, , , , , sixthStone] = stones;
+
+	console.log(`Extracted stones: ${firstStone}, ${sixthStone}`);
+
 /* Task 7: The Array of Shadows */
 const shadows = ["Darkness", "Silence", "Whisper", "Echo"];
 // TODO: The Cave of Shadows hides more than it reveals. Use array destructuring with the rest parameter to separate the visible shadow (which is the first) from the hidden ones. Print the visible shadow and the hidden shadows.
+const [visible, ...hiddenShadows] = shadows;
+
+	console.log("Visible shadow:", visible);
+	console.log(`Hidden shadows: ${hiddenShadows.join(",")}`);
 
 /* Task 8: The Wise Function */
 // TODO: Destructo needs to decode ancient directions to continue his quest. Help him by writing a function `revealPath` that decodes and prints the direction and distance to travel. The function takes an object with `direction` and `distance` as parameters.
+function revealPath({ direction, distance }) {
+	console.log(`Travel ${distance} miles towards the ${direction}.`);
+}
+revealPath({ direction: "East", distance: 115 });
 
 /* Task 9: The Scroll of Defaults */
 // TODO: Destructo finds an ancient scroll with a potion recipe, but some ingredients are missing. Write a function `mixPotion` that uses defaults "Water" and "Fireflower" for `ingredient1` and `ingredient2` if they are not specified and print those mixings. The function takes an object with these optional properties.
+function mixPotion ({ingredient1 = "Water", ingredient2 = "Fireflower"} = {})
+{
+	console.log(`Mixing ${ingredient1} and ${ingredient2}...`);
+}
+
+mixPotion({ingredient1: "Water"});
 
 /* Task 10: The Array Spell */
 // TODO: At the gates of an ancient library, Destructo must cast a spell with the first two ingredients from a list given to him by a wise owl. Create a function `castSpell` that uses array destructuring to access these ingredients from an array and print the spell casting.
+function castSpell ([ingredient1, ingredient2])
+{
+	console.log(`Casting spell with ${ingredient1} and ${ingredient2}`);
+}
+
+castSpell(["Urokomon", "Kikkoumon", "Birch"]);
 
 /* Task 11: The Nested Secret */
 const nestedSecret = {outer: {inner: "The Final Key"}};
 // TODO: Behind the final door lies a nested artifact containing the ultimate clue. Use nested destructuring to extract `The Final Key`. Print the unveiled secret.
+const { outer: {inner}} = nestedSecret;
+
+	console.log("Unveiled secret:", inner);
 
 /* Task 12: The Swap of Fate */
 let stoneA = "Emerald";
