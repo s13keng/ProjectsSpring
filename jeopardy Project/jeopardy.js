@@ -94,5 +94,10 @@ function handleClick(evt) {
 
   }
 }
-
+startBtn.addEventListener('mouseover', () => {
+  startBtn.innerText = 'Restart';
+});
+startBtn.addEventListener('mouseout', () => {
+  startBtn.innerText = '▶';
+});
 document.getElementById('start').addEventListener('click', setupAndRender);
