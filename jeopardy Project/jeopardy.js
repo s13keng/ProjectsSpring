@@ -1,7 +1,5 @@
 // Lets Jeopardy!
-//to get api
-//let res = await axios.get('https://rithm-jeopardy.herokuapp.com/api/categories?count=10');
-//console.log(res.data);
+
 // Array of category objects with id and title
 const NUM_CATEGORIES = 6;
 const NUM_QUESTIONS_PER_CAT = 5;
