@@ -3,8 +3,8 @@
 //let res = await axios.get('https://rithm-jeopardy.herokuapp.com/api/categories?count=10');
 //console.log(res.data);
 // Array of category objects with id and title
-const NUM_CATEGORIES = 5;
-const NUM_QUESTIONS_PER_CAT = 3;
+const NUM_CATEGORIES = 6;
+const NUM_QUESTIONS_PER_CAT = 5;
 let categories = [];
 
 async function getCategories() {
@@ -64,7 +64,7 @@ function fillTable() {
     const tr = document.createElement('tr');
     for (let j = 0; j < NUM_CATEGORIES; j++) {
       const td = document.createElement('td');
-      td.innerText = '?';
+      td.innerText ='100';
       td.setAttribute('data-cat', j);
       td.setAttribute('data-clue', i);
       td.addEventListener('click', handleClick);

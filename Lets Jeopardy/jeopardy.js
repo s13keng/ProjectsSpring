@@ -97,11 +97,17 @@ $("#play").on("click", handleClickOfPlay);
 function handleClickOfPlay ()
 {
   // todo set the game up if the play button is clickable
-  if (!isPlayButtonClickable) return;
-  isPlayButtonClickable = true;
+ /* if (!isPlayButtonClickable){
+    return;
+  } 
+   // isPlayButtonClickable = true;
+  setupTheGame();
+}*/
+if (isPlayButtonClickable) {
+  isPlayButtonClickable = false;
   setupTheGame();
 }
-
+}
 /**
  * Sets up the game.
  *
@@ -120,12 +126,37 @@ async function setupTheGame ()
 {
   // todo show the spinner while setting up the game
   document.getElementById('spinner').style.display = 'block';
+  
   // todo reset the DOM (table, button text, the end text)
-  resetDOM();
+  //resetDOM();
+  //document.querySelector('#play').innerHTML = 'play';
+  //document.querySelector('#restart').textContent = 'Restart Game';
+ // document.querySelector('#game-over').textContent = '';
+ $("#loading").show();
+ $("#categories").empty();
+ $("#clues").empty();
+ $("#play").text("Restarting...");
+ $("#active-clue").html("");
+ categories = [];
   // todo fetch the game data (categories with clues)
-  const categories = await fetchGameData();
+  
+  //const categories = await fetchGameData();
+  /*const categoryIds = await getCategoryIds(); // You should define this function
+  const categories = [];
+  for (const id of categoryIds) {
+    const category = await getCategoryWithClues(id); // You should define this function
+    categories.push(category);
+  }
+*/
+const categoryIds = await getCategoryIds();
+  const categoriesWithClues = await Promise.all(
+    categoryIds.map(id => getCategoryData(id))
+  );
+  categories = categoriesWithClues;
   // todo fill the table
   fillTable(categories);
+  $("#loading").hide();
+  $("#play").text("Restart the Game!");
 }
 
 /**
@@ -141,11 +172,25 @@ async function setupTheGame ()
 
 async function getCategoryIds ()
 {
-  const ids = []; // todo set after fetching
+ /* const ids = []; // todo set after fetching
 
   // todo fetch NUMBER_OF_CATEGORIES amount of categories
 
   return ids;
+}*/
+const response = await fetch(`${API_URL}categories?count=100`);
+const allCategories = await response.json();
+
+const validCategories = allCategories.filter(cat => cat.clues_count >= NUMBER_OF_CLUES_PER_CATEGORY);
+const selected = [];
+
+while (selected.length < NUMBER_OF_CATEGORIES) {
+  const randIndex = Math.floor(Math.random() * validCategories.length);
+  const candidate = validCategories.splice(randIndex, 1)[0];
+  selected.push(candidate.id);
+}
+
+return selected;
 }
 
 /**
@@ -175,7 +220,7 @@ async function getCategoryIds ()
 
 async function getCategoryData (categoryId)
 {
-  const categoryWithClues = {
+  /*const categoryWithClues = {
     id: categoryId,
     title: undefined, // todo set after fetching
     clues: [] // todo set after fetching
@@ -184,6 +229,25 @@ async function getCategoryData (categoryId)
   // todo fetch the category with NUMBER_OF_CLUES_PER_CATEGORY amount of clues
 
   return categoryWithClues;
+}*/
+const response = await fetch(`${API_URL}category?id=${categoryId}`);
+const data = await response.json();
+
+const validClues = data.clues
+  .filter(clue => clue.question && clue.answer)
+  .slice(0, NUMBER_OF_CLUES_PER_CATEGORY)
+  .map((clue, index) => ({
+    id: clue.id,
+    value: clue.value || (index + 1) * 100,
+    question: clue.question,
+    answer: clue.answer
+  }));
+
+return {
+  id: data.id,
+  title: data.title,
+  clues: validClues
+};
 }
 
 /**
@@ -204,6 +268,26 @@ async function getCategoryData (categoryId)
 function fillTable (categories)
 {
   // todo
+  const $theadRow = $("#categories");
+  const $tbody = $("#clues");
+
+  $theadRow.empty();
+  $tbody.empty();
+
+  for (let category of categories) {
+    $theadRow.append(`<th>${category.title}</th>`);
+  }
+
+  for (let i = 0; i < NUMBER_OF_CLUES_PER_CATEGORY; i++) {
+    const $row = $("<tr>");
+    for (let category of categories) {
+      const clue = category.clues[i];
+      const cellId = `${category.id}-${clue.id}`;
+      const $cell = $(`<td class="clue" id="${cellId}">$${clue.value}</td>`);
+      $row.append($cell);
+    }
+    $tbody.append($row);
+  }
 }
 
 $(".clue").on("click", handleClickOfClue);
@@ -225,9 +309,33 @@ $(".clue").on("click", handleClickOfClue);
 function handleClickOfClue (event)
 {
   // todo find and remove the clue from the categories
+  if (activeClueMode !== 0) return;
 
+  const [categoryIdStr, clueIdStr] = event.target.id.split("-");
+  const categoryId = parseInt(categoryIdStr);
+  const clueId = parseInt(clueIdStr);
+
+  for (let i = 0; i < categories.length; i++) {
+    const cat = categories[i];
+    if (cat.id === categoryId) {
+      const clueIndex = cat.clues.findIndex(clue => clue.id === clueId);
+      if (clueIndex !== -1) {
+        activeClue = cat.clues[clueIndex];
+        cat.clues.splice(clueIndex, 1);
+        if (cat.clues.length === 0) {
+          categories.splice(i, 1);
+        }
+        break;
+      }
+    }
+  }
   // todo mark clue as viewed (you can use the class in style.css), display the question at #active-clue
+
+  activeClueMode = 1;
+  $("#active-clue").html(activeClue.question);
+  $(event.target).addClass("viewed").html("");
 }
+
 
 $("#active-clue").on("click", handleClickOfActiveClue);
 
