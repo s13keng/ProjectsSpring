@@ -77,13 +77,13 @@ function fillTable() {
   }
 }
 
-function handleClick(evt) {
-  const td = evt.target;
+function handleClick(event) {
+  const td = event.target;
   const catIdx = td.getAttribute('data-cat');
   const clueIdx = td.getAttribute('data-clue');
 
   const clue = categories[catIdx].clues[clueIdx];
-
+//How the layput for each tile going to appear
   if (clue.showing === null) {
     td.innerText = clue.question;
     clue.showing = 'question';
@@ -94,6 +94,7 @@ function handleClick(evt) {
 
   }
 }
+//Whenever you start once you click and hover out it will give you option to restart
 const startButton = document.getElementById('start');
 
 startButton.addEventListener('mouseover', () => {
