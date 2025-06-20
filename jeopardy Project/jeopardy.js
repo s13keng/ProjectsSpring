@@ -97,9 +97,9 @@ function handleClick(evt) {
 const startButton = document.getElementById('start');
 
 startButton.addEventListener('mouseover', () => {
-  startButton.innerText = 'Play';
+  startButton.innerText = 'play';
 });
 startButton.addEventListener('mouseout', () => {
-  startButton.innerText = 'Lets Play';
+  startButton.innerText = 'Restart';
 });
 document.getElementById('start').addEventListener('click', setupAndRender);
