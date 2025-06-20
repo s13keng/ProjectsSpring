@@ -13,11 +13,12 @@ async function getCategories() {
   let catIDs = _.sampleSize(res.data, NUM_CATEGORIES).map(c => c.id);
   return catIDs;
 }
-//
+//Getting from api the questions to be put onto it
 async function getCategory(catId) {
   let res = await axios.get(`https://rithm-jeopardy.herokuapp.com/api/category?id=${catId}`);
   let clues = _.sampleSize(res.data.clues, NUM_QUESTIONS_PER_CAT);
   return {
+//While the structure of the information will be in order of
     title: res.data.title,
     clues: clues.map(clue => ({
       question: clue.question,
@@ -32,8 +33,9 @@ async function setupAndRender() {
   document.getElementById('jeopardy').style.display = 'none';
 
   const catIDs = await getCategories();
-
+//To reset game by clearing previous data from api
   categories = [];
+//Loop around to fill in the id of each
   for (let id of catIDs) {
     try {
       const cat = await getCategory(id);
@@ -49,22 +51,24 @@ async function setupAndRender() {
 }
 
 function fillTable() {
-  //catertories
+//categories
   const $catRow = document.getElementById('categories-row');
-  //questions
+//questions
   const $body = document.getElementById('clues-body');
 
   $catRow.innerHTML = '';
   $body.innerHTML = '';
-
+//To put the categories to their selected slot
   for (let cat of categories) {
     const th = document.createElement('th');
     th.innerText = cat.title.toUpperCase();
     $catRow.appendChild(th);
   }
-
+//Loop around to fill the questions
   for (let i = 0; i < NUM_QUESTIONS_PER_CAT; i++) {
     const tr = document.createElement('tr');
+//For all rows to have a price 
+//Also attach each one of the clue
     for (let j = 0; j < NUM_CATEGORIES; j++) {
       const td = document.createElement('td');
       td.innerText = `$${(i + 1) * 100}`;
@@ -103,4 +107,5 @@ startButton.addEventListener('mouseover', () => {
 startButton.addEventListener('mouseout', () => {
   startButton.innerText = 'Restart';
 });
+//Once the play button is clicked it would start the game and render
 document.getElementById('start').addEventListener('click', setupAndRender);
