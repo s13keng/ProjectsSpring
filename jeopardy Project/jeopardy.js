@@ -4,13 +4,16 @@
 const NUM_CATEGORIES = 6;
 const NUM_QUESTIONS_PER_CAT = 5;
 let categories = [];
+// The URL of the API.
+const API_URL = "https://rithm-jeopardy.herokuapp.com/api/"; 
 
+//Help with grabbing the categories out the api out of 100 count
 async function getCategories() {
   let res = await axios.get(`https://rithm-jeopardy.herokuapp.com/api/categories?count=100`);
   let catIDs = _.sampleSize(res.data, NUM_CATEGORIES).map(c => c.id);
   return catIDs;
 }
-
+//
 async function getCategory(catId) {
   let res = await axios.get(`https://rithm-jeopardy.herokuapp.com/api/category?id=${catId}`);
   let clues = _.sampleSize(res.data.clues, NUM_QUESTIONS_PER_CAT);
@@ -39,7 +42,7 @@ async function setupAndRender() {
       console.error("Failed to load category", id);
     }
   }
-
+//Data will be taken from api to fill
   fillTable();
   document.getElementById('loading').style.display = 'none';
   document.getElementById('jeopardy').style.display = 'table';
