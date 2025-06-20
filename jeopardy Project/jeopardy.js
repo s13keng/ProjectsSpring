@@ -95,4 +95,4 @@ function handleClick(evt) {
   }
 }
 
-document.getElementById('play').addEventListener('click', setupAndRender);
+document.getElementById('start').addEventListener('click', setupAndRender);
