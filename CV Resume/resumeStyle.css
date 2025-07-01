@@ -18,15 +18,6 @@ header{
   flex-flow: column;
  
  } 
-
- /* have content spaced out and adjust height and margin*/
-/*header section{
-  justify-content: space-between;
-  display: flex;
-  height: 20rem;
-  margin: auto;
-
-} */
 .myinfo{
   justify-content: flex-end;
   display: flex;
