@@ -2,13 +2,11 @@
 *{
   box-sizing: border-box;
 }
-
 /* The fonts for the whole file, the background color */
 html{
   font-family: Arial, Helvetica, sans-serif;
   background:linear-gradient(#636363, #a2ab58)
 } 
-
 /* header padding */
 header{
    padding: .1rem;
@@ -16,8 +14,8 @@ header{
    justify-content: space-between;
    flex-direction: row;
   flex-flow: column;
- 
  } 
+
 .myinfo{
   justify-content: flex-end;
   display: flex;
@@ -26,22 +24,13 @@ header{
   flex-direction: row;
 } 
 
-/* email and addres*/
-/*header section .nameholder{
-  display: inline-flex;
-  align-self: center;
-  text-align: center;
-  padding-left: 200px;
-}*/
 .nameholder{
   display: flex;
   justify-content: center;
   align-self: center;
   text-align: center;
-  /*padding-left: 100px;*/
 }
 
-/* profile pic h/w and radius to make round as well border*/
 #profilePic{
   width: 15rem;
   height: 15rem;
@@ -53,14 +42,6 @@ header{
   margin-left: 0;
 }
 
-/*flex and alignment for contact info */
-/*header section .contactinfo {
-  padding-left: 200px;
-  display: inline-flex;
-  align-items: flex-end;
-  font-size: small;
-  text-align: right;
-}*/
 .contactinfo {
   font-size: small; 
   align-items: flex-end;
@@ -74,7 +55,6 @@ body{
   padding: 1rem;
   border: 10px solid black;
 }
-
 /* Styling to all headings in each section of resume w/ sizing and shadow to name */
 h1{
   font-family: 'Times New Roman', Times, serif;
@@ -96,37 +76,30 @@ h3{
   font-size: 1em;
   border-bottom: 3px solid black;
 }
-
 /* color for the names of the two things in the table */
 th{
   color: #9cd8a2;
   font-size: 1.2em;
 }
-
 /* to have it to the left*/
 .workexp .dataset{
   display: flex;
   justify-content: flex-start;
 }
-
 /* to indent the text*/
 p{
   text-indent: 10px;
 }
-
 /* Style for links as well as getting rid of underline */
 a{
   text-decoration: none;
   color: #013220;
   transition: font-size 2s;
 }
-
 /* give spacing and border line */
 h1, h2, h3{
 padding-bottom: 0.5rem;
-
 }
-
 /*give color to the text with spacing and  border double lines*/
 form input, form textarea, form select{
 padding: 0.3rem;
@@ -134,7 +107,6 @@ color: green;
 border: double rgb(4, 0, 0);
 background-color: #ffffff;
 }
-
 /* gave border on top of the footer to divide the content from it as well enclose it in a box*/
 footer {
   border: 3px double black;
